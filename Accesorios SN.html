@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Accesorios SN</title>
+
+<style>
+
+body{
+font-family:Arial;
+margin:0;
+background:#f5f6fb;
+}
+
+/* HEADER */
+
+header{
+background:linear-gradient(90deg,#0044ff,#ff0000);
+color:white;
+padding:25px;
+text-align:center;
+}
+
+/* MENU */
+
+nav{
+background:#111;
+display:flex;
+justify-content:center;
+gap:25px;
+padding:15px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* BUSCADOR */
+
+.buscador{
+text-align:center;
+margin:25px;
+}
+
+.buscador input{
+padding:12px;
+width:300px;
+border-radius:6px;
+border:1px solid #ccc;
+}
+
+/* CATALOGO */
+
+.catalogo{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+padding:30px;
+}
+
+.producto{
+background:white;
+border-radius:10px;
+padding:15px;
+text-align:center;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+.producto img{
+width:100%;
+border-radius:8px;
+}
+
+.precio{
+color:#ff0000;
+font-weight:bold;
+font-size:18px;
+}
+
+button{
+background:#0044ff;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:5px;
+cursor:pointer;
+margin-top:10px;
+}
+
+button:hover{
+background:#ff0000;
+}
+
+/* CARRITO */
+
+.carrito{
+position:fixed;
+top:20px;
+right:20px;
+background:white;
+padding:10px 15px;
+border-radius:8px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+}
+
+/* OFERTAS */
+
+.ofertas{
+background:#0044ff;
+color:white;
+padding:40px;
+text-align:center;
+}
+
+/* SECCIONES */
+
+section{
+padding:40px;
+}
+
+h2{
+text-align:center;
+}
+
+/* FORMULARIOS */
+
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+input,textarea{
+padding:10px;
+border-radius:5px;
+border:1px solid #ccc;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* FOOTER */
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Accesorios SN</h1>
+<p>Accesorios y tecnología para tu celular</p>
+
+</header>
+
+<nav>
+
+<a href="#catalogo">Catálogo</a>
+<a href="#ofertas">Ofertas</a>
+<a href="#envios">Envíos</a>
+<a href="#contacto">Contacto</a>
+<a href="#reclamos">Reclamos</a>
+
+</nav>
+
+<div class="carrito">
+
+🛒 Carrito: <span id="contador">0</span>
+
+</div>
+
+<div class="buscador">
+
+<input type="text" id="buscar" placeholder="Buscar producto...">
+
+</div>
+
+<section id="catalogo">
+
+<h2>Catálogo</h2>
+
+<div class="catalogo">
+
+<div class="producto">
+
+<img src="https://via.placeholder.com/200">
+<h3>Funda Antigolpe</h3>
+<p class="precio">$10.000</p>
+<button onclick="agregar()">Agregar al carrito</button>
+
+</div>
+
+<div class="producto">
+
+<img src="https://via.placeholder.com/200">
+<h3>Cargador Rápido</h3>
+<p class="precio">$15.000</p>
+<button onclick="agregar()">Agregar al carrito</button>
+
+</div>
+
+<div class="producto">
+
+<img src="https://via.placeholder.com/200">
+<h3>Auriculares Bluetooth</h3>
+<p class="precio">$22.000</p>
+<button onclick="agregar()">Agregar al carrito</button>
+
+</div>
+
+<div class="producto">
+
+<img src="https://via.placeholder.com/200">
+<h3>Vidrio Templado</h3>
+<p class="precio">$5.000</p>
+<button onclick="agregar()">Agregar al carrito</button>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="ofertas" class="ofertas">
+
+<h2>Promociones</h2>
+
+<p>🔥 20% OFF en fundas esta semana</p>
+<p>⚡ Cargadores rápidos con garantía</p>
+<p>🎧 Nuevos auriculares Bluetooth disponibles</p>
+
+</section>
+
+<section id="envios">
+
+<h2>Envíos</h2>
+
+<p style="text-align:center">
+
+📦 Enviamos a todo el país<br>
+🚚 Envíos por correo o mensajería<br>
+⏱ Entregas entre 24 y 72 horas
+
+</p>
+
+</section>
+
+<section id="contacto">
+
+<h2>Contacto</h2>
+
+<form>
+
+<input type="text" placeholder="Nombre">
+
+<input type="email" placeholder="Correo">
+
+<textarea placeholder="Mensaje"></textarea>
+
+<button>Enviar</button>
+
+</form>
+
+<p style="text-align:center;margin-top:20px;">
+
+📞 WhatsApp: +54 9 3364 30-5629
+
+</p>
+
+</section>
+
+<section id="reclamos">
+
+<h2>Reclamos</h2>
+
+<form>
+
+<input type="text" placeholder="Número de pedido">
+
+<input type="email" placeholder="Correo">
+
+<textarea placeholder="Describe tu problema"></textarea>
+
+<button>Enviar reclamo</button>
+
+</form>
+
+</section>
+
+<a class="whatsapp" href="https://wa.me/5493364305629">
+
+WhatsApp
+
+</a>
+
+<footer>
+
+<p>© 2026 Accesorios SN</p>
+
+</footer>
+
+<script>
+
+let contador=0
+
+function agregar(){
+
+contador++
+
+document.getElementById("contador").innerText=contador
+
+}
+
+document.getElementById("buscar").addEventListener("keyup",function(){
+
+let filtro=this.value.toLowerCase()
+
+let productos=document.querySelectorAll(".producto")
+
+productos.forEach(p=>{
+
+let texto=p.innerText.toLowerCase()
+
+p.style.display=texto.includes(filtro)?"block":"none"
+
+})
+
+})
+
+</script>
+
+</body>
+
+</html>
